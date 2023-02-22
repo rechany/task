@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+ <h2>Application Form</h2>
+  <form  action="" method="post">
+    {% csrf_token %}
+
+    <input type="text" name="name" placeholder="Enter your Name" ><br>
+    <input type="date" name="dob" placeholder="DOB" ><br>
+    <input type="number" name="age" placeholder="Age" ><br>
+    <label>gender:</label>
+      <label>Female<input type="radio"></label>
+       <label>Male<input type="radio"></label><br>
+    <input type="tel"  name="phone_number" placeholder="Phone Number" ><br>
+     <input type="email" name="email" placeholder="Email-id" ><br>
+    <input type="text" name="address" placeholder="Address"><br>
+
+
+
+      <label for="district">District:</label>
+  <select id="district" name="district" required>
+    <option value="">Select</option>
+    <option value="ernakulam">Ernakulam</option>
+    <option value="thrissur">Thrissur</option>
+    <option value="kottayam">Kottayam</option>
+  </select><br>
+
+        <label for="branch">Branch:</label>
+  <select id="branch" name="branch" required>
+    <option value="">Select</option>
+    <optgroup label="Ernakulam">
+      <option value="aluva">Aluva</option>
+      <option value="edapally">Edapally</option>
+    </optgroup>
+       <optgroup label="Thrissur">
+      <option value="guruvayur">Guruvayur</option>
+      <option value="olari">Olari</option>
+    </optgroup>
+    <optgroup label="Kottayam">
+      <option value="kumarakom">Kumarakom</option>
+      <option value="changanassery">Changanassery</option>
+    </optgroup>
+  </select>
+
+       <label for="account-type">Account Type:</label>
+  <select id="account-type" name="account_type" required>
+    <option value="">Select</option>
+    <option value="savings">Savings Account</option>
+    <option value="current">Current Account</option>
+    <option value="fixed-deposit">Fixed Deposit</option>
+  </select><br>
+
+   <fieldset>
+    <legend>Materials provided:</legend>
+    <label for="debit-card">
+      <input type="checkbox" id="debit-card" name="materials" value="debit-card">
+      Debit Card
+    </label>
+
+    <label for="credit-card">
+      <input type="checkbox" id="credit-card" name="materials" value="credit-card">
+      Credit Card
+    </label>
+
+    <label for="cheque-book">
+      <input type="checkbox" id="cheque-book" name="materials" value="cheque-book">
+      Cheque Book
+    </label>
+  </fieldset><br>
+
+    <button type="submit" onclick="return showConfirmation()">Submit</button>
+  <button type="button">Logout</button>
+</form>
+
+</body>
+</html>

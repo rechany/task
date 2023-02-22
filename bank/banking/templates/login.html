@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Login Page</title>
+</head>
+<body>
+  <h2>Login</h2>
+
+<form action="{% url 'application' %}" method="post">
+{% csrf_token %}
+    <input type="text" name="username" placeholder="enter your username" style="background-color:aqua;border:1px solid black;"><br>
+    <input type="password" name="password" placeholder="enter your password" style="background-color:aqua;border:1px solid black;"><br>
+    <input type="submit" style="background-color:red;border:1px solid black;">
+
+
+  <p>Don't have an account? <a href="/register/">Register here</a>.</p>
+</body>
+</html>

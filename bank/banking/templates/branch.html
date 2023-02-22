@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Branches Page</title>
+	<link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+	<h2>Branches</h2>
+	<form method="get" action="{% url 'wikipedia' %}">
+		<label for="district">Select a district:</label>
+		<select id="district" name="district">
+			<option value="Ernakulam">Ernakulam</option>
+			<option value="Thrissur">Thrissur</option>
+			<option value="Kottayam">Kottayam</option>
+			<option value="Alappuzha">Alappuzha</option>
+			<option value="Kollam">Kollam</option>
+		</select>
+		<button type="submit">Go</button>
+	</form>
+</body>
+</html>
